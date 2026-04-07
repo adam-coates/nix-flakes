@@ -1,3 +1,6 @@
 [submodule "python"]
 	path = python
 	url = git@github.com:adam-coates/nix-flakes-python.git
+[submodule "quarto"]
+	path = quarto
+	url = git@github.com:adam-coates/nix-flakes-quarto.git
