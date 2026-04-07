@@ -7,3 +7,6 @@
 [submodule "r"]
 	path = r
 	url = git@github.com:adam-coates/nix-flakes-r.git
+[submodule "rust"]
+	path = rust
+	url = git@github.com:adam-coates/nix-flakes-rust.git
