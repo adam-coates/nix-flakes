@@ -1,0 +1,42 @@
+name: Update Submodules
+
+# References
+# https://zenn.dev/ymmmtym/articles/dc741561759a49
+# https://qiita.com/keiswe/items/7bcb29ea6c29d710b64b
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: "recursive"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update submodules
+        run: |
+          git submodule update --init --remote --recursive
+      - name: Show git status
+        run: echo "$(git status --porcelain)"
+      - name: Commit changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Update submodules at $(date "+DATE: %Y-%m-%d TIME: %H:%M:%S")"
+          git push
