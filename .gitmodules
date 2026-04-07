@@ -4,3 +4,6 @@
 [submodule "quarto"]
 	path = quarto
 	url = git@github.com:adam-coates/nix-flakes-quarto.git
+[submodule "r"]
+	path = r
+	url = git@github.com:adam-coates/nix-flakes-r.git
