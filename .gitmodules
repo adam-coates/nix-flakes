@@ -10,3 +10,6 @@
 [submodule "rust"]
 	path = rust
 	url = git@github.com:adam-coates/nix-flakes-rust.git
+[submodule "typst"]
+	path = typst
+	url = git@github.com:adam-coates/nix-flakes-typst.git
