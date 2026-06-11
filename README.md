@@ -2,6 +2,12 @@
 
 Reusable Nix flake templates for reproducible development environments.
 
+Clone using:
+
+```bash
+git clone --recurse-submodules https://github.com/adam-coates/nix-flakes.git
+```
+
 ## Templates
 
 | Template | Description |
