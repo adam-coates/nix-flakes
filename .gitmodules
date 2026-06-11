@@ -13,3 +13,6 @@
 [submodule "typst"]
 	path = typst
 	url = git@github.com:adam-coates/nix-flakes-typst.git
+[submodule "nix-flakes-psychopy"]
+	path = nix-flakes-psychopy
+	url = https://github.com/adam-coates/nix-flakes-psychopy.git
