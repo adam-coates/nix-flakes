@@ -11,6 +11,7 @@ Reusable Nix flake templates for reproducible development environments.
 | `quarto` | Quarto + Python + R + pandoc + texlive |
 | `nodejs` | Node.js + corepack + TypeScript |
 | `rust` | Rust (stable via rust-overlay) + rust-analyzer |
+| `psychopy` | Psychopy running using prebuilt-wheel |
 
 ## Usage
 
